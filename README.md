@@ -3,6 +3,9 @@
 [![Total Downloads](https://poser.pugx.org/mindtwo/laravel-multilingual/downloads)](https://packagist.org/packages/mindtwo/laravel-multilingual)
 [![License](https://poser.pugx.org/mindtwo/laravel-multilingual/license)](https://packagist.org/packages/mindtwo/laravel-multilingual)
 
+## Introduction
+This package extends Laravel with several multi language features.
+
 ## Installation
 
 You can install the package via composer:
