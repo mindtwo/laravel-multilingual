@@ -1,0 +1,12 @@
+watch:
+    directories:
+    - config
+    - src
+    - tests
+    - mirgations
+    fileMask: '*.php'
+notifications:
+    passingTests: false
+    failingTests: false
+phpunit:
+    arguments: '--stop-on-failure'
