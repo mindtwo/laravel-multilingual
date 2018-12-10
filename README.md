@@ -1,4 +1,5 @@
 # Laravel Multilingual
+[![Build Status](https://travis-ci.org/mindtwo/laravel-multilingual.svg?branch=master)](https://travis-ci.org/mindtwo/laravel-multilingual)
 [![Latest Stable Version](https://poser.pugx.org/mindtwo/laravel-multilingual/v/stable)](https://packagist.org/packages/mindtwo/laravel-multilingual)
 [![Total Downloads](https://poser.pugx.org/mindtwo/laravel-multilingual/downloads)](https://packagist.org/packages/mindtwo/laravel-multilingual)
 [![License](https://poser.pugx.org/mindtwo/laravel-multilingual/license)](https://packagist.org/packages/mindtwo/laravel-multilingual)
