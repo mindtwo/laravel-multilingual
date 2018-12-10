@@ -2,11 +2,11 @@
 
 namespace mindtwo\LaravelMultilingual\Tests\Unit\Providers;
 
-use Illuminate\Support\Facades\App;
-use mindtwo\LaravelMultilingual\Providers\EventServiceProvider;
-use mindtwo\LaravelMultilingual\Services\Locale;
-use mindtwo\LaravelMultilingual\Tests\TestCase;
 use Mockery;
+use Illuminate\Support\Facades\App;
+use mindtwo\LaravelMultilingual\Tests\TestCase;
+use mindtwo\LaravelMultilingual\Services\Locale;
+use mindtwo\LaravelMultilingual\Providers\EventServiceProvider;
 
 class EventServiceProviderTest extends TestCase
 {

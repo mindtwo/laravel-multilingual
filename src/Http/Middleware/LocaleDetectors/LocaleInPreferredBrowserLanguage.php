@@ -15,7 +15,7 @@ class LocaleInPreferredBrowserLanguage implements LocaleDetector
      */
     public function match(Request $request, Locale $locale): bool
     {
-        return !empty($this->detectPreferredLanguage());
+        return ! empty($this->detectPreferredLanguage());
     }
 
     /**

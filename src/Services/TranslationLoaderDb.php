@@ -14,7 +14,7 @@ class TranslationLoaderDb implements TranslationLoader
     {
         foreach ($this->getConfiguredModelClass() as $model) {
             $translation = $model::getTranslationsForGroup($locale, $group);
-            if (!empty($translation)) {
+            if (! empty($translation)) {
                 return $translation;
             }
         }

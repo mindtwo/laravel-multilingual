@@ -3,9 +3,9 @@
 namespace mindtwo\LaravelMultilingual\Tests\Unit\Providers;
 
 use Illuminate\Support\Facades\App;
-use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
-use mindtwo\LaravelMultilingual\Providers\TranslationServiceProvider;
 use mindtwo\LaravelMultilingual\Tests\TestCase;
+use mindtwo\LaravelMultilingual\Providers\TranslationServiceProvider;
+use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
 
 class TranslationServiceProviderTest extends TestCase
 {

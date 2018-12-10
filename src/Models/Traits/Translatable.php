@@ -2,13 +2,13 @@
 
 namespace mindtwo\LaravelMultilingual\Models\Traits;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Model;
+use mindtwo\LaravelMultilingual\Services\Locale;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 use mindtwo\LaravelMultilingual\Exceptions\Exception;
 use mindtwo\LaravelMultilingual\Exceptions\TranslatableAttributeNotDefinedException;
 use mindtwo\LaravelMultilingual\Exceptions\TranslatableAttributeTypeNotDefinedException;
-use mindtwo\LaravelMultilingual\Services\Locale;
 
 trait Translatable
 {
@@ -57,7 +57,7 @@ trait Translatable
      */
     public function translatableAttributeOrFail($attribute): string
     {
-        if (!$this->hasTranslatableAttribute($attribute)) {
+        if (! $this->hasTranslatableAttribute($attribute)) {
             throw new TranslatableAttributeNotDefinedException(sprintf('Translatable attribute "%s" not defined', $attribute));
         }
 
@@ -87,7 +87,7 @@ trait Translatable
      */
     public function translatableTypeOrFail(string $type): string
     {
-        if (!$this->translatableTypeExists($type)) {
+        if (! $this->translatableTypeExists($type)) {
             throw new TranslatableAttributeTypeNotDefinedException(sprintf('Attribute type "%s" not defined', $type));
         }
 
@@ -174,7 +174,7 @@ trait Translatable
         }
 
         // Convert scalar values to array
-        $value = !is_array($value) ? [$locale => $value] : $value;
+        $value = ! is_array($value) ? [$locale => $value] : $value;
 
         // Map values to translation attributes
         $this->translationValues[$name] = collect($value)->mapWithKeys(function ($value, $locale) {
@@ -204,7 +204,7 @@ trait Translatable
         }
 
         // Load translations, if there are no values for the given attribute
-        if (!array_key_exists($name, $this->translationValues)) {
+        if (! array_key_exists($name, $this->translationValues)) {
             $this->loadAttributeTranslations($name);
         }
 

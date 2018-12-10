@@ -2,15 +2,15 @@
 
 namespace mindtwo\LaravelMultilingual\Tests\Unit\Middleware;
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Session\Middleware\StartSession;
+use mindtwo\LaravelMultilingual\Tests\TestCase;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Session\Middleware\StartSession;
-use Illuminate\Support\Facades\Route;
 use mindtwo\LaravelMultilingual\Http\Middleware\Localization;
 use mindtwo\LaravelMultilingual\Providers\EventServiceProvider;
-use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
 use mindtwo\LaravelMultilingual\Providers\TranslationServiceProvider;
-use mindtwo\LaravelMultilingual\Tests\TestCase;
+use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
 
 class LocalizationTest extends TestCase
 {
