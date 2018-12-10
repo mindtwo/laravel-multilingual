@@ -26,6 +26,7 @@ class FirstSegment implements Redirector
     public function redirect(string $locale)
     {
         dd('hans');
+
         return redirect(sprintf('/%s/', $locale), 307);
     }
 

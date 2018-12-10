@@ -46,7 +46,9 @@ class LocalizationTest extends TestCase
 
     protected function getUrl($url)
     {
-        Route::get($url, function () { return true; })->middleware([
+        Route::get($url, function () {
+            return true;
+        })->middleware([
             EncryptCookies::class,
             StartSession::class,
             Localization::class,
@@ -63,7 +65,6 @@ class LocalizationTest extends TestCase
         $response = $this->getUrl('/locale/en');
         $response->assertCookie('locale', 'en');
     }
-    
 
     /*
 
