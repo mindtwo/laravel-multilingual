@@ -2,13 +2,13 @@
 
 namespace mindtwo\LaravelMultilingual\Tests\Unit\Services;
 
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use mindtwo\LaravelMultilingual\Models\ContentTypeString;
-use mindtwo\LaravelMultilingual\Models\ContentTypeText;
-use mindtwo\LaravelMultilingual\Providers\EventServiceProvider;
-use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
-use mindtwo\LaravelMultilingual\Providers\TranslationServiceProvider;
 use mindtwo\LaravelMultilingual\Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use mindtwo\LaravelMultilingual\Models\ContentTypeText;
+use mindtwo\LaravelMultilingual\Models\ContentTypeString;
+use mindtwo\LaravelMultilingual\Providers\EventServiceProvider;
+use mindtwo\LaravelMultilingual\Providers\TranslationServiceProvider;
+use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
 
 class TranslationLoaderManagerTest extends TestCase
 {

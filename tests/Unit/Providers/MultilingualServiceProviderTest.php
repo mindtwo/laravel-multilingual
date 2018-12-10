@@ -3,8 +3,8 @@
 namespace mindtwo\LaravelMultilingual\Tests\Unit\Providers;
 
 use Illuminate\Support\Facades\Config;
-use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
 use mindtwo\LaravelMultilingual\Tests\TestCase;
+use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
 
 class MultilingualServiceProviderTest extends TestCase
 {

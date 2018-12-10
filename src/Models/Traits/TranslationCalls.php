@@ -39,7 +39,7 @@ trait TranslationCalls
                 ->where('locale', $locale)
                 ->get()
                 ->reduce(function ($lines, $model) use ($group) {
-                    if (!is_null($model->value)) {
+                    if (! is_null($model->value)) {
                         $group = collect(explode('.', $model->group))
                             ->slice(1) // Remove first entry for laravel compatibility. The first segment is the filename on the default file loader.
                             ->push($model->key) // Push translation key as a last segment

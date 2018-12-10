@@ -3,13 +3,13 @@
 namespace mindtwo\LaravelMultilingual\Tests\Unit\Traits;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use mindtwo\LaravelDynamicModelMutators\DynamicModelMutator;
-use mindtwo\LaravelMultilingual\Models\Traits\Translatable;
-use mindtwo\LaravelMultilingual\Providers\EventServiceProvider;
-use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
-use mindtwo\LaravelMultilingual\Providers\TranslationServiceProvider;
 use mindtwo\LaravelMultilingual\Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use mindtwo\LaravelMultilingual\Models\Traits\Translatable;
+use mindtwo\LaravelDynamicModelMutators\DynamicModelMutator;
+use mindtwo\LaravelMultilingual\Providers\EventServiceProvider;
+use mindtwo\LaravelMultilingual\Providers\TranslationServiceProvider;
+use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
 
 class TranslatableTest extends TestCase
 {

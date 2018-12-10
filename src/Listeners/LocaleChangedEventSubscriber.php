@@ -2,8 +2,8 @@
 
 namespace mindtwo\LaravelMultilingual\Listeners;
 
-use Illuminate\Foundation\Events\LocaleUpdated;
 use Illuminate\Support\Facades\App;
+use Illuminate\Foundation\Events\LocaleUpdated;
 use mindtwo\LaravelMultilingual\Services\Locale;
 
 class LocaleChangedEventSubscriber
