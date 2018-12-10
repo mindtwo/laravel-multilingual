@@ -27,7 +27,7 @@ class Locale extends Collection
     {
         $this->config = $config;
         parent::__construct([
-            'default' => $this->config->get('app.locale')
+            'default' => $this->config->get('app.locale'),
         ]);
     }
 
@@ -70,7 +70,7 @@ class Locale extends Collection
      */
     public function available(): Collection
     {
-        if (! array_key_exists('available', $this->items)) {
+        if (!array_key_exists('available', $this->items)) {
             $locales = collect($this->config->get('laravel-multilingual.locales'));
 
             $this->items['available'] = $locales->flatten()->unique();
@@ -113,7 +113,7 @@ class Locale extends Collection
      */
     public function setCurrentLocaleAttribute(string $locale): self
     {
-        if (! $this->isAvailable($locale)) {
+        if (!$this->isAvailable($locale)) {
             throw new LocaleNotAvailableException();
         }
 
@@ -139,7 +139,7 @@ class Locale extends Collection
      */
     public function getOrFail(string $locale, string $service = null): string
     {
-        if (! $this->isAvailable($locale, $service)) {
+        if (!$this->isAvailable($locale, $service)) {
             throw new LocaleNotAvailableException();
         }
 

@@ -57,7 +57,7 @@ trait Translatable
      */
     public function translatableAttributeOrFail($attribute): string
     {
-        if (! $this->hasTranslatableAttribute($attribute)) {
+        if (!$this->hasTranslatableAttribute($attribute)) {
             throw new TranslatableAttributeNotDefinedException(sprintf('Translatable attribute "%s" not defined', $attribute));
         }
 
@@ -87,7 +87,7 @@ trait Translatable
      */
     public function translatableTypeOrFail(string $type): string
     {
-        if (! $this->translatableTypeExists($type)) {
+        if (!$this->translatableTypeExists($type)) {
             throw new TranslatableAttributeTypeNotDefinedException(sprintf('Attribute type "%s" not defined', $type));
         }
 
@@ -165,7 +165,7 @@ trait Translatable
      *
      * @return $this
      */
-    protected function setAttributeTranslation(string $name, $value, $config=null, $locale = null): self
+    protected function setAttributeTranslation(string $name, $value, $config = null, $locale = null): self
     {
         $name = $this->translatableAttributeOrFail($name);
 
@@ -174,7 +174,7 @@ trait Translatable
         }
 
         // Convert scalar values to array
-        $value = ! is_array($value) ? [$locale => $value] : $value;
+        $value = !is_array($value) ? [$locale => $value] : $value;
 
         // Map values to translation attributes
         $this->translationValues[$name] = collect($value)->mapWithKeys(function ($value, $locale) {
@@ -195,7 +195,7 @@ trait Translatable
      *
      * @return string
      */
-    public function getAttributeTranslation(string $name, $config=null, string $locale = null): string
+    public function getAttributeTranslation(string $name, $config = null, string $locale = null): string
     {
         $name = $this->translatableAttributeOrFail($name);
 
@@ -204,7 +204,7 @@ trait Translatable
         }
 
         // Load translations, if there are no values for the given attribute
-        if (! array_key_exists($name, $this->translationValues)) {
+        if (!array_key_exists($name, $this->translationValues)) {
             $this->loadAttributeTranslations($name);
         }
 
@@ -222,6 +222,7 @@ trait Translatable
     public function translate(string $name, string $locale = null)
     {
         $config = isset($this->translations[$name]) ? $this->translations[$name] : null;
+
         return $this->getAttributeTranslation($name, $config, $locale);
     }
 

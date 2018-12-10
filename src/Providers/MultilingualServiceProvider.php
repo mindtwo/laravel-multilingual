@@ -2,8 +2,8 @@
 
 namespace mindtwo\LaravelMultilingual\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\ServiceProvider;
 use mindtwo\LaravelMultilingual\Services\Locale;
 
 class MultilingualServiceProvider extends ServiceProvider

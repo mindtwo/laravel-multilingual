@@ -29,6 +29,6 @@ class LocaleChangedEventSubscriber
      */
     public function subscribe($events)
     {
-        $events->listen(LocaleUpdated::class, [LocaleChangedEventSubscriber::class, 'changeLocale']);
+        $events->listen(LocaleUpdated::class, [self::class, 'changeLocale']);
     }
 }
