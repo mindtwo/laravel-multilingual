@@ -2,9 +2,10 @@
 [![Build Status](https://travis-ci.org/mindtwo/laravel-multilingual.svg?branch=master)](https://travis-ci.org/mindtwo/laravel-multilingual)
 [![StyleCI](https://styleci.io/repos/160329571/shield)](https://styleci.io/repos/160329571)
 [![Quality Score](https://img.shields.io/scrutinizer/g/mindtwo/laravel-multilingual.svg?style=flat-square)](https://scrutinizer-ci.com/g/mindtwo/laravel-multilingual)
-[![Latest Stable Version](https://poser.pugx.org/mindtwo/laravel-multilingual/v/stable)](https://packagist.org/packages/mindtwo/laravel-multilingual)
-[![Total Downloads](https://poser.pugx.org/mindtwo/laravel-multilingual/downloads)](https://packagist.org/packages/mindtwo/laravel-multilingual)
-[![License](https://poser.pugx.org/mindtwo/laravel-multilingual/license)](https://packagist.org/packages/mindtwo/laravel-multilingual)
+[![Latest Stable Version](https://img.shields.io/packagist/v/mindtwo/laravel-multilingual?style=flat-square)](https://packagist.org/packages/mindtwo/laravel-multilingual)
+[![Total Downloads](https://img.shields.io/packagist/dt/mindtwo/laravel-multilingual?style=flat-square)](https://packagist.org/packages/mindtwo/laravel-multilingual)
+[![MIT Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.md)
+
 
 ## Introduction
 This package extends Laravel with several multi language features.
