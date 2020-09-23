@@ -25,7 +25,7 @@ class EventServiceProviderTest extends TestCase
     /**
      * Clean up the testing environment before the next test.
      */
-    public function tearDown()
+    public function tearDown(): void
     {
         Mockery::close();
         parent::tearDown();

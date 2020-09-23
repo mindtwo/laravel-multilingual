@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use mindtwo\LaravelMultilingual\Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use mindtwo\LaravelMultilingual\Models\Traits\Translatable;
-use mindtwo\LaravelDynamicModelMutators\DynamicModelMutator;
+use Mindtwo\DynamicMutators\Traits\HasDynamicMutators;
 use mindtwo\LaravelMultilingual\Providers\EventServiceProvider;
 use mindtwo\LaravelMultilingual\Providers\TranslationServiceProvider;
 use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
@@ -39,7 +39,7 @@ class TranslatableTest extends TestCase
     protected function mockLinkableClass(): Model
     {
         return new class() extends Model {
-            use DynamicModelMutator,
+            use HasDynamicMutators,
                 Translatable;
 
             protected $translations = [

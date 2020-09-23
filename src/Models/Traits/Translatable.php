@@ -312,14 +312,11 @@ trait Translatable
         );
     }
 
-    public function __call($name, $arguments)
-    {
-        if (preg_match('/^translatable([A-Z][a-z]{1,})$/', $name, $matches)) {
-            if ($this->translatableTypeExists($matches[1])) {
-                return $this->translatableRelationByType($matches[1]);
-            }
-        }
-
-        return parent::__call($name, $arguments);
+    public function translatableTexts() {
+        return $this->translatableRelationByType('Texts');
+        
+    }
+    public function translatableStrings() {
+        return $this->translatableRelationByType('Strings');
     }
 }
