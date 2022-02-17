@@ -5,9 +5,8 @@ namespace mindtwo\LaravelMultilingual\Services;
 class TranslationLoaderDb implements TranslationLoader
 {
     /**
-     * @param string $locale
-     * @param string $group
-     *
+     * @param  string  $locale
+     * @param  string  $group
      * @return array
      */
     public function loadTranslations(string $locale, string $group): array

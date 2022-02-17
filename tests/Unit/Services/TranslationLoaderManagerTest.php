@@ -2,13 +2,13 @@
 
 namespace mindtwo\LaravelMultilingual\Tests\Unit\Services;
 
-use mindtwo\LaravelMultilingual\Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use mindtwo\LaravelMultilingual\Models\ContentTypeText;
 use mindtwo\LaravelMultilingual\Models\ContentTypeString;
+use mindtwo\LaravelMultilingual\Models\ContentTypeText;
 use mindtwo\LaravelMultilingual\Providers\EventServiceProvider;
-use mindtwo\LaravelMultilingual\Providers\TranslationServiceProvider;
 use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
+use mindtwo\LaravelMultilingual\Providers\TranslationServiceProvider;
+use mindtwo\LaravelMultilingual\Tests\TestCase;
 
 class TranslationLoaderManagerTest extends TestCase
 {
@@ -17,8 +17,7 @@ class TranslationLoaderManagerTest extends TestCase
     /**
      * Get package providers.
      *
-     * @param \Illuminate\Foundation\Application $app
-     *
+     * @param  \Illuminate\Foundation\Application  $app
      * @return array
      */
     protected function getPackageProviders($app)
@@ -34,11 +33,10 @@ class TranslationLoaderManagerTest extends TestCase
      * Create a translation.
      *
      * @param $value
-     * @param string $key
-     * @param string $group
-     * @param string $locale
-     * @param string $type
-     *
+     * @param  string  $key
+     * @param  string  $group
+     * @param  string  $locale
+     * @param  string  $type
      * @return ContentTypeString|ContentTypeText
      */
     protected static function createTrans($value, string $key, string $group, string $locale = 'en', string $type = ContentTypeString::class)

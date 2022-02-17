@@ -3,13 +3,13 @@
 namespace mindtwo\LaravelMultilingual\Tests\Unit\Traits;
 
 use Illuminate\Database\Eloquent\Model;
-use mindtwo\LaravelMultilingual\Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use mindtwo\LaravelMultilingual\Models\Traits\Translatable;
 use Mindtwo\DynamicMutators\Traits\HasDynamicMutators;
+use mindtwo\LaravelMultilingual\Models\Traits\Translatable;
 use mindtwo\LaravelMultilingual\Providers\EventServiceProvider;
-use mindtwo\LaravelMultilingual\Providers\TranslationServiceProvider;
 use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
+use mindtwo\LaravelMultilingual\Providers\TranslationServiceProvider;
+use mindtwo\LaravelMultilingual\Tests\TestCase;
 
 class TranslatableTest extends TestCase
 {
@@ -18,8 +18,7 @@ class TranslatableTest extends TestCase
     /**
      * Get package providers.
      *
-     * @param \Illuminate\Foundation\Application $app
-     *
+     * @param  \Illuminate\Foundation\Application  $app
      * @return array
      */
     protected function getPackageProviders($app)
@@ -38,7 +37,8 @@ class TranslatableTest extends TestCase
      */
     protected function mockLinkableClass(): Model
     {
-        return new class() extends Model {
+        return new class() extends Model
+        {
             use HasDynamicMutators,
                 Translatable;
 

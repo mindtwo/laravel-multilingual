@@ -2,8 +2,8 @@
 
 namespace mindtwo\LaravelMultilingual\Listeners;
 
-use Illuminate\Support\Facades\App;
 use Illuminate\Foundation\Events\LocaleUpdated;
+use Illuminate\Support\Facades\App;
 use mindtwo\LaravelMultilingual\Services\Locale;
 
 class LocaleChangedEventSubscriber
@@ -11,8 +11,7 @@ class LocaleChangedEventSubscriber
     /**
      * Handle the event.
      *
-     * @param object $event
-     *
+     * @param  object  $event
      * @return string
      */
     public static function changeLocale($event): string
@@ -25,7 +24,7 @@ class LocaleChangedEventSubscriber
     /**
      * Register the listeners for the subscriber.
      *
-     * @param object $events
+     * @param  object  $events
      */
     public function subscribe($events)
     {

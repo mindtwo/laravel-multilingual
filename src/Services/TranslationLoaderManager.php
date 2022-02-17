@@ -9,10 +9,9 @@ class TranslationLoaderManager extends FileLoader
     /**
      * Load the messages for the given locale.
      *
-     * @param string $locale
-     * @param string $group
-     * @param string $namespace
-     *
+     * @param  string  $locale
+     * @param  string  $group
+     * @param  string  $namespace
      * @return array
      */
     public function load($locale, $group, $namespace = null): array
@@ -29,10 +28,9 @@ class TranslationLoaderManager extends FileLoader
     }
 
     /**
-     * @param string      $locale
-     * @param string      $group
-     * @param string|null $namespace
-     *
+     * @param  string  $locale
+     * @param  string  $group
+     * @param  string|null  $namespace
      * @return array
      */
     protected function getTranslationsForTranslationLoaders(

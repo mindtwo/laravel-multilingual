@@ -3,16 +3,15 @@
 namespace mindtwo\LaravelMultilingual\Tests\Unit\Providers;
 
 use Illuminate\Support\Facades\Config;
-use mindtwo\LaravelMultilingual\Tests\TestCase;
 use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
+use mindtwo\LaravelMultilingual\Tests\TestCase;
 
 class MultilingualServiceProviderTest extends TestCase
 {
     /**
      * Get package providers.
      *
-     * @param \Illuminate\Foundation\Application $app
-     *
+     * @param  \Illuminate\Foundation\Application  $app
      * @return array
      */
     protected function getPackageProviders($app)

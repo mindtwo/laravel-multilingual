@@ -2,9 +2,9 @@
 
 namespace mindtwo\LaravelMultilingual\Providers;
 
-use mindtwo\LaravelMultilingual\Services\Locale;
-use mindtwo\LaravelMultilingual\Listeners\LocaleChangedEventSubscriber;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as IlluminateEventServiceProvider;
+use mindtwo\LaravelMultilingual\Listeners\LocaleChangedEventSubscriber;
+use mindtwo\LaravelMultilingual\Services\Locale;
 
 class EventServiceProvider extends IlluminateEventServiceProvider
 {

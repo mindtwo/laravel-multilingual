@@ -8,9 +8,8 @@ use mindtwo\LaravelMultilingual\Services\Locale;
 class LocaleInPreferredBrowserLanguage implements LocaleDetector
 {
     /**
-     * @param Request $request
-     * @param Locale  $locale
-     *
+     * @param  Request  $request
+     * @param  Locale  $locale
      * @return bool
      */
     public function match(Request $request, Locale $locale): bool
@@ -19,9 +18,8 @@ class LocaleInPreferredBrowserLanguage implements LocaleDetector
     }
 
     /**
-     * @param Request $request
-     * @param Locale  $locale
-     *
+     * @param  Request  $request
+     * @param  Locale  $locale
      * @return string
      */
     public function get(Request $request, Locale $locale): string
@@ -30,9 +28,8 @@ class LocaleInPreferredBrowserLanguage implements LocaleDetector
     }
 
     /**
-     * @param Request $request
-     * @param Locale  $locale
-     *
+     * @param  Request  $request
+     * @param  Locale  $locale
      * @return string
      */
     public function detectPreferredLanguage(Request $request, Locale $locale): string
