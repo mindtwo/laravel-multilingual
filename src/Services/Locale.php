@@ -3,9 +3,9 @@
 namespace mindtwo\LaravelMultilingual\Services;
 
 use Exception;
-use Illuminate\Support\Str;
-use Illuminate\Support\Collection;
 use Illuminate\Config\Repository as Config;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 use mindtwo\LaravelMultilingual\Exceptions\LocaleNotAvailableException;
 use mindtwo\LaravelMultilingual\Exceptions\LocaleServiceNotAvailableException;
 
@@ -21,7 +21,7 @@ class Locale extends Collection
     /**
      * Locale constructor.
      *
-     * @param Config $config
+     * @param  Config  $config
      */
     public function __construct(Config $config)
     {
@@ -44,9 +44,9 @@ class Locale extends Collection
     /**
      * Get the current language.
      *
-     * @throws Exception
-     *
      * @return string
+     *
+     * @throws Exception
      */
     protected function getCurrentAttribute(): string
     {
@@ -82,11 +82,10 @@ class Locale extends Collection
     /**
      * Get a list of available locales within a service.
      *
-     * @param string $service
+     * @param  string  $service
+     * @return Collection
      *
      * @throws LocaleServiceNotAvailableException
-     *
-     * @return Collection
      */
     public function availableInService(string $service): Collection
     {
@@ -104,12 +103,11 @@ class Locale extends Collection
     /**
      * Set current locale.
      *
-     * @param string $locale
+     * @param  string  $locale
+     * @return Locale
      *
      * @throws LocaleNotAvailableException
      * @throws LocaleServiceNotAvailableException
-     *
-     * @return Locale
      */
     public function setCurrentLocaleAttribute(string $locale): self
     {
@@ -129,13 +127,12 @@ class Locale extends Collection
     /**
      * Get a locale or throw an exception, if it is unavailable.
      *
-     * @param string      $locale
-     * @param string|null $service
+     * @param  string  $locale
+     * @param  string|null  $service
+     * @return string
      *
      * @throws LocaleNotAvailableException
      * @throws LocaleServiceNotAvailableException
-     *
-     * @return string
      */
     public function getOrFail(string $locale, string $service = null): string
     {
@@ -149,12 +146,11 @@ class Locale extends Collection
     /**
      * Determinate if a locale is available.
      *
-     * @param string      $locale
-     * @param string|null $service
+     * @param  string  $locale
+     * @param  string|null  $service
+     * @return bool
      *
      * @throws LocaleServiceNotAvailableException
-     *
-     * @return bool
      */
     public function isAvailable(string $locale, string $service = null): bool
     {
@@ -168,8 +164,7 @@ class Locale extends Collection
     /**
      * Get the value of an attribute using its mutator.
      *
-     * @param string $key
-     *
+     * @param  string  $key
      * @return mixed
      */
     protected function mutateAttribute($key)
@@ -180,11 +175,10 @@ class Locale extends Collection
     /**
      * Get an element from the collection.
      *
-     * @param string $key
+     * @param  string  $key
+     * @return mixed
      *
      * @throws Exception
-     *
-     * @return mixed
      */
     public function __get($key)
     {

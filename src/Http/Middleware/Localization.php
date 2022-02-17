@@ -16,13 +16,12 @@ class Localization
     /**
      * Handle an incoming request.
      *
-     * @param Request     $request
-     * @param Closure     $next
-     * @param string|null $guard
+     * @param  Request  $request
+     * @param  Closure  $next
+     * @param  string|null  $guard
+     * @return mixed
      *
      * @throws \Illuminate\Container\EntryNotFoundException
-     *
-     * @return mixed
      */
     public function handle($request, Closure $next, $guard = null)
     {
@@ -50,10 +49,9 @@ class Localization
 
     /**
      * @param $request
+     * @return string locale
      *
      * @throws \Illuminate\Container\EntryNotFoundException
-     *
-     * @return string locale
      */
     public function detectAndSetLocale($request): string
     {
@@ -65,11 +63,10 @@ class Localization
     }
 
     /**
-     * @param Request $request
+     * @param  Request  $request
+     * @return string
      *
      * @throws \Illuminate\Container\EntryNotFoundException
-     *
-     * @return string
      */
     protected function getRequestedLocale(Request $request): string
     {

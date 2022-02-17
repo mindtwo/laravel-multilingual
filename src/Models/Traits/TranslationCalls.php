@@ -23,9 +23,8 @@ trait TranslationCalls
     /**
      * Get translation based on a given group and key.
      *
-     * @param string $locale
-     * @param string $group
-     *
+     * @param  string  $locale
+     * @param  string  $group
      * @return array
      */
     public static function getTranslationsForGroup(string $locale, string $group): array
@@ -57,9 +56,8 @@ trait TranslationCalls
     /**
      * Generate cache key.
      *
-     * @param string $group
-     * @param string $locale
-     *
+     * @param  string  $group
+     * @param  string  $locale
      * @return string
      */
     public static function getCacheKey(string $group, string $locale): string

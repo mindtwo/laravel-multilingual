@@ -2,13 +2,13 @@
 
 namespace mindtwo\LaravelMultilingual\Models\Traits;
 
-use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
-use mindtwo\LaravelMultilingual\Services\Locale;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Support\Str;
 use mindtwo\LaravelMultilingual\Exceptions\Exception;
 use mindtwo\LaravelMultilingual\Exceptions\TranslatableAttributeNotDefinedException;
 use mindtwo\LaravelMultilingual\Exceptions\TranslatableAttributeTypeNotDefinedException;
+use mindtwo\LaravelMultilingual\Services\Locale;
 
 trait Translatable
 {
@@ -37,8 +37,7 @@ trait Translatable
     /**
      * Determinate if a translatable attribute is defined.
      *
-     * @param string $attribute
-     *
+     * @param  string  $attribute
      * @return bool
      */
     public function hasTranslatableAttribute(string $attribute): bool
@@ -50,10 +49,9 @@ trait Translatable
      * Get the translatable attribute name or throw an exception, if it is not defined.
      *
      * @param $attribute
+     * @return string
      *
      * @throws TranslatableAttributeNotDefinedException
-     *
-     * @return string
      */
     public function translatableAttributeOrFail($attribute): string
     {
@@ -67,8 +65,7 @@ trait Translatable
     /**
      * Get the normalized translatable type.
      *
-     * @param string $type
-     *
+     * @param  string  $type
      * @return string
      */
     public function translatableType(string $type): string
@@ -79,11 +76,10 @@ trait Translatable
     /**
      * Determinate if a translatable type exists and throw an exception if not.
      *
-     * @param string $type
+     * @param  string  $type
+     * @return string
      *
      * @throws TranslatableAttributeTypeNotDefinedException
-     *
-     * @return string
      */
     public function translatableTypeOrFail(string $type): string
     {
@@ -97,11 +93,10 @@ trait Translatable
     /**
      * Get the normalized translatable type.
      *
-     * @param string $attribute
+     * @param  string  $attribute
+     * @return string
      *
      * @throws TranslatableAttributeNotDefinedException
-     *
-     * @return string
      */
     public function translatableTypeByAttribute(string $attribute): string
     {
@@ -113,8 +108,7 @@ trait Translatable
     /**
      * Determinate if a translatable type exists.
      *
-     * @param string $type
-     *
+     * @param  string  $type
      * @return bool
      */
     public function translatableTypeExists(string $type): bool
@@ -125,11 +119,10 @@ trait Translatable
     /**
      * Get the translatable relation by attribute name.
      *
-     * @param string $name
+     * @param  string  $name
+     * @return MorphMany
      *
      * @throws Exception
-     *
-     * @return MorphMany
      */
     public function translatableRelationByAttribute(string $name): MorphMany
     {
@@ -141,11 +134,10 @@ trait Translatable
     /**
      * Get the translatable relation by type.
      *
-     * @param string $type
+     * @param  string  $type
+     * @return MorphMany
      *
      * @throws TranslatableAttributeTypeNotDefinedException
-     *
-     * @return MorphMany
      */
     public function translatableRelationByType(string $type): MorphMany
     {
@@ -157,13 +149,12 @@ trait Translatable
     /**
      * Set attribute translation.
      *
-     * @param string $name
+     * @param  string  $name
      * @param $value
-     * @param null $locale
+     * @param  null  $locale
+     * @return $this
      *
      * @throws TranslatableAttributeNotDefinedException
-     *
-     * @return $this
      */
     protected function setAttributeTranslation(string $name, $value, $config = null, $locale = null): self
     {
@@ -187,13 +178,12 @@ trait Translatable
     /**
      * Get attribute translation.
      *
-     * @param string      $name
-     * @param string|null $locale
+     * @param  string  $name
+     * @param  string|null  $locale
+     * @return string
      *
      * @throws Exception
      * @throws TranslatableAttributeNotDefinedException
-     *
-     * @return string
      */
     public function getAttributeTranslation(string $name, $config = null, string $locale = null): string
     {
@@ -212,12 +202,11 @@ trait Translatable
     }
 
     /**
-     * @param string      $name
-     * @param string|null $locale
+     * @param  string  $name
+     * @param  string|null  $locale
+     * @return string
      *
      * @throws Exception
-     *
-     * @return string
      */
     public function translate(string $name, string $locale = null)
     {
@@ -227,8 +216,8 @@ trait Translatable
     }
 
     /**
-     * @param string $attributeName
-     * @param array  $values
+     * @param  string  $attributeName
+     * @param  array  $values
      *
      * @throws Exception
      */
@@ -246,11 +235,10 @@ trait Translatable
     }
 
     /**
-     * @param string $attribute
+     * @param  string  $attribute
+     * @return Translatable
      *
      * @throws Exception
-     *
-     * @return Translatable
      */
     public function loadAttributeTranslations(string $attribute): self
     {
@@ -278,8 +266,7 @@ trait Translatable
     /**
      * Get translations as array.
      *
-     * @param string|null $locale
-     *
+     * @param  string|null  $locale
      * @return array
      */
     public function translationsToArray($locale = null): array
@@ -296,8 +283,7 @@ trait Translatable
     /**
      * Get the model and translations as array.
      *
-     * @param string|null $locale
-     *
+     * @param  string|null  $locale
      * @return array
      */
     public function toArrayWithTranslations($locale = null): array
@@ -312,11 +298,13 @@ trait Translatable
         );
     }
 
-    public function translatableTexts() {
+    public function translatableTexts()
+    {
         return $this->translatableRelationByType('Texts');
-        
     }
-    public function translatableStrings() {
+
+    public function translatableStrings()
+    {
         return $this->translatableRelationByType('Strings');
     }
 }

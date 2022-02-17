@@ -3,20 +3,20 @@
 namespace mindtwo\LaravelMultilingual\Tests\Unit\Services;
 
 use Illuminate\Support\Facades\App;
-use mindtwo\LaravelMultilingual\Tests\TestCase;
-use mindtwo\LaravelMultilingual\Services\Locale;
-use mindtwo\LaravelMultilingual\Providers\EventServiceProvider;
-use mindtwo\LaravelMultilingual\Providers\TranslationServiceProvider;
-use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
 use mindtwo\LaravelMultilingual\Exceptions\LocaleNotAvailableException;
 use mindtwo\LaravelMultilingual\Exceptions\LocaleServiceNotAvailableException;
+use mindtwo\LaravelMultilingual\Providers\EventServiceProvider;
+use mindtwo\LaravelMultilingual\Providers\MultilingualServiceProvider;
+use mindtwo\LaravelMultilingual\Providers\TranslationServiceProvider;
+use mindtwo\LaravelMultilingual\Services\Locale;
+use mindtwo\LaravelMultilingual\Tests\TestCase;
 
 class LocaleTest extends TestCase
 {
     /**
      * Define environment setup.
      *
-     * @param \Illuminate\Foundation\Application $app
+     * @param  \Illuminate\Foundation\Application  $app
      */
     protected function getEnvironmentSetUp($app)
     {
@@ -38,8 +38,7 @@ class LocaleTest extends TestCase
     /**
      * Get package providers.
      *
-     * @param \Illuminate\Foundation\Application $app
-     *
+     * @param  \Illuminate\Foundation\Application  $app
      * @return array
      */
     protected function getPackageProviders($app)

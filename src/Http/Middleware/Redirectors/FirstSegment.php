@@ -10,7 +10,6 @@ class FirstSegment implements Redirector
      * @param $request
      * @param $newLocale
      * @param $defaultLocale
-     *
      * @return bool
      */
     public function match(Request $request, string $newLocale, string $defaultLocale): bool
@@ -20,7 +19,6 @@ class FirstSegment implements Redirector
 
     /**
      * @param $locale
-     *
      * @return Redirector
      */
     public function redirect(string $locale)
@@ -31,8 +29,7 @@ class FirstSegment implements Redirector
     }
 
     /**
-     * @param Request $request
-     *
+     * @param  Request  $request
      * @return bool
      */
     protected function isHomepage(Request $request): bool
